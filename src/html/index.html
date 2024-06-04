@@ -10,12 +10,13 @@
     <div class="container">
         <h1>Skjellum YR</h1>
         <form id="locationForm">
-            <input type="text" id="locationInput" placeholder="Skriv inn sted" required>
-            <button id="locationSubmit" type="submit">Søk på sted</button>
+            <input type="text" id="locationInput" placeholder="Skriv inn sted" required autocomplete="off">
         </form>
+        <div id="inputResults"></div>
         <div id="weather"></div>
-        <script src="src/js/index.js"></script>
+        
     </div>
     <div id="map"></div>
+    <script src="src/js/index.js"></script>
 </body>
 </html>

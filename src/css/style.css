@@ -36,6 +36,28 @@ body{
     color: white;
     cursor: pointer;
 }
+.place{
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: fit-content;
+    font-size: 125%;
+}
+#inputResults{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.waittext{
+    margin-top: 8px;
+    font-size: 125%;
+}
 
 @font-face {
     font-family: 'Open sans';
