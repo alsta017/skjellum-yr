@@ -28,8 +28,14 @@ fetch(yrUrl, {
     console.log(data);
     for (let i = 0; i < data.properties.timeseries.length; i++) {
         let time = "Time: " + new Date(data.properties.timeseries[i].time).toLocaleTimeString('nb-NO', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'});
-        let temperature = "Temperature: " + data.properties.timeseries[i].data.instant.details.air_temperature + " °C";
-        let windSpeed = "Wind speed: " + data.properties.timeseries[i].data.instant.details.wind_speed + " m/s";
+        let temperature;
+        if (data.properties.meta.units.air_temperature === "celsius") {
+            temperature = "Temperature: " + data.properties.timeseries[i].data.instant.details.air_temperature + " °C";
+        } else {
+            temperature = "Temperature: " + data.properties.timeseries[i].data.instant.details.air_temperature + data.properties.meta.units.air_temperature;
+        }
+        
+        let windSpeed = "Wind speed: " + data.properties.timeseries[i].data.instant.details.wind_speed + " " + data.properties.meta.units.wind_speed;
         let windDirection = "Wind direction: " + data.properties.timeseries[i].data.instant.details.wind_from_direction + "°";
         let rain;
         let weather;
@@ -235,8 +241,8 @@ fetch(yrUrl, {
         weatherDiv.appendChild(temperatureText);
         weatherDiv.appendChild(windSpeedText);
         weatherDiv.appendChild(windDirectionText);
-        weatherDiv.appendChild(weatherSymbol);
         weatherDiv.appendChild(rainDiv);
+        weatherDiv.appendChild(weatherSymbol);
         weatherEl.appendChild(weatherDiv);
     }
 })

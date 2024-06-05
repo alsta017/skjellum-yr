@@ -71,6 +71,33 @@ body{
     top: 8px;
     right: 8px;
 }
+.weather{
+    width: fit-content;
+    border: 1px dashed white;
+    padding: 16px;
+    border-radius: 8px;
+    margin: auto;
+}
+.tutorialHeader{
+    font-size: 125%;
+    width: fit-content;
+}
+#tutorialDiv{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+    width: fit-content;
+    max-width: 75%;
+    margin: auto;
+    border-radius: 8px;
+}
+.tutorialText{
+    font-size: 90%;
+    padding: 8px;
+    width: fit-content;
+}
 
 @font-face {
     font-family: 'Open sans';
