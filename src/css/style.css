@@ -58,6 +58,19 @@ body{
     margin-top: 8px;
     font-size: 125%;
 }
+#tutorialButton{
+    background-color: #1f1f1f;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
 
 @font-face {
     font-family: 'Open sans';
