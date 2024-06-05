@@ -1,2 +1,2 @@
-# skjellum yr
+# sky
  Hente data fra yr løsning
