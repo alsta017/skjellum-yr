@@ -16,6 +16,10 @@ app.get("/weather", function (req, res) {
     res.sendFile(__dirname + '/src/html/weather.html');
 })
 
+app.get("/tutorial", function (req, res) {
+    res.sendFile(__dirname + '/src/html/tutorial.html');
+})
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
